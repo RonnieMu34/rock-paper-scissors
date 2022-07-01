@@ -9,5 +9,5 @@ function computerPlay(choicesArray) {
 function playerSelect() {
     let playerChoice = prompt("Pick one: Rock, Paper, or Scissors?");
 
-    
+    return playerChoice.toLowerCase();
 }
