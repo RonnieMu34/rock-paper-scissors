@@ -11,3 +11,18 @@ function playerSelect() {
 
     return playerChoice.toLowerCase();
 }
+
+function playGame(choicesArray) {
+    if (playerChoice() == "rock") {
+        if (computerPlay(choicesArray) == "scissors") {
+            console.log("You win! Rock beats scissors!");
+            return "You win! Rock beats scissors!";
+        } else if (computerPlay(choicesArray) == "paper") {
+            console.log("You lose! Paper beats rock!");
+            return "You lose! Paper beats rock!";
+        } else {
+            console.log("It's a tie! Both are rocks!");
+            return "It's a tie! Both are rocks!";
+        }
+    }
+}
