@@ -1,7 +1,13 @@
-const choices = ["Rock", "Paper", "Scissors"];
+const choices = ["rock", "paper", "scissors"];
 
-function computerPLay(choicesArray) {
+function computerPlay(choicesArray) {
     const randomIndex = Math.floor(Math.random() * choicesArray.length);
     let choice = choicesArray[randomIndex];
     return choice;
+}
+
+function playerSelect() {
+    let playerChoice = prompt("Pick one: Rock, Paper, or Scissors?");
+
+    
 }
