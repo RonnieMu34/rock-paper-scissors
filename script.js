@@ -3,7 +3,7 @@ const choices = ["rock", "paper", "scissors"];
 function computerPlay(choicesArray) {
     const randomIndex = Math.floor(Math.random() * choicesArray.length);
     let choice = choicesArray[randomIndex];
-    return choice;
+    return choice.toLowerCase;
 }
 
 function playerSelect() {
