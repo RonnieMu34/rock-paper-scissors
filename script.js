@@ -43,4 +43,34 @@ function playGame(computerChoice, playerChoice) {
     }
 }
 
-console.log(playGame(computerPlay(), playerSelect()));
+function winOrLose(computerChoice, playerChoice) {
+    if (computerChoice == "rock") {
+        if (playerChoice == "paper") {
+            return 1;
+        } else if (playerChoice == "scissors") {
+            return -1;
+        } else {
+            return 0;
+        }
+    }
+
+    if (computerChoice == "paper") {
+        if (playerChoice == "paper") {
+            return 0;
+        } else if (playerChoice == "scissors") {
+            return 1;
+        } else {
+            return -1;
+        }
+    }
+
+    if (computerChoice == "scissors") {
+        if (playerChoice == "paper") {
+            return -1;
+        } else if (playerChoice == "scissors") {
+            return 0;
+        } else {
+            return 1;
+        }
+    }
+}
