@@ -5,11 +5,13 @@ function computerPlay() {
     return choice;
 }
 
-function playGame(computerChoice) {
-
+function playerSelect() {
     playerChoice = prompt("Rock, Paper, or Scissors?");
-    playerChoice = playerChoice.toLowerCase();
-    
+    return playerChoice = playerChoice.toLowerCase();
+}
+
+function playGame(computerChoice, playerChoice) {
+
     if (computerChoice == "rock") {
         if (playerChoice == "paper") {
             return "You win! Paper beats rock!";
@@ -41,4 +43,4 @@ function playGame(computerChoice) {
     }
 }
 
-console.log(playGame(computerPlay()));
+console.log(playGame(computerPlay(), playerSelect()));
