@@ -19,11 +19,11 @@ function playRound(computerChoice, playerChoice) {
         } else if (computerChoice == "scissors") {
             return "You Win! Rock beats scissors!";
         } else {
-            return "It's a tie! Both chose rock!";
+            return "It's a Tie! Both chose rock!";
         }
     } else if (playerChoice == "paper") {
         if (computerChoice == "paper") {
-            return "It's a tie! Both chose paper!";
+            return "It's a Tie! Both chose paper!";
         } else if (computerChoice == "scissors") {
             return "You Lose! Scissors beats paper!";
         } else {
@@ -33,12 +33,27 @@ function playRound(computerChoice, playerChoice) {
         if (computerChoice == "paper") {
             return "You Win! Scissors beats paper!";
         } else if (computerChoice == "scissors") {
-            return "It's a tie! Both chose scissors!";
+            return "It's a Tie! Both chose scissors!";
         } else {
             return "You Lose! Rock beats scissors!";
         }
     }
 }
 
-console.log(playRound(computerPlay(), playerSelect()));
+function game() {
+    let playerScore = 0;
+    let computerScore = 0;
+    for (let i = 0; i < 5; i++) {
+       let result = playRound(computerPlay(), playerSelect());
+       if (result.includes("Win")) {
+           playerScore++;
+       } else if (result.includes("Lose")) {
+           computerScore++;
+       } else {
+           continue;
+       }
+    }
+    
+}
+
 
