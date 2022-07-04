@@ -53,7 +53,13 @@ function game() {
            continue;
        }
     }
-    
+    if (playerScore > computerScore) {
+        return `The score is ${playerScore} - ${computerScore}, the player wins!`;
+    } else if (computerScore > playerScore) {
+        return `The score is ${playerScore} - ${computerScore}, the player loses!`;
+    } else {
+        return `The score is ${playerScore} - ${computerScore}, it's a tie!`;
+    }
 }
 
 
