@@ -11,8 +11,8 @@ function playerSelect() {
 }
 
 function playRound(computerChoice, playerChoice) {
-    console.log("You chose " + playerChoice);
-    console.log("Computer chose " + computerChoice);
+    console.log(`You chose ${playerChoice}`);
+    console.log(`Computer chose ${computerChoice}`);
     if (playerChoice == "rock") {
         if (computerChoice == "paper") {
             return "You Lose! Paper beats rock!";
