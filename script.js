@@ -10,3 +10,17 @@ function playerSelect() {
     return playerChoice = playerChoice.toLowerCase();
 }
 
+function playRound(computerChoice, playerChoice) {
+    console.log(computerChoice);
+    if (playerChoice == "rock") {
+        if (computerChoice == "paper") {
+            return "You Lose! Paper beats rock!";
+        } else if (computerChoice == "scissors") {
+            return "You Win! Rock beats scissors!";
+        } else {
+            return "It's a tie! Both chose rock!";
+        }
+    }
+}
+
+console.log(playRound(computerPlay(), playerSelect()));
