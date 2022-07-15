@@ -1,3 +1,4 @@
+const buttons = document.querySelectorAll('.btn'); 
 function computerPlay() {
     const choices = ["rock", "paper", "scissors"];
     let randomIndex = Math.floor(Math.random() * choices.length);
