@@ -43,7 +43,7 @@ function playRound(computerChoice, playerChoice) {
 function game() {
     let playerScore = 0;
     let computerScore = 0;
-    for (let i = 0; i < 5; i++) {
+    //for (let i = 0; i < 5; i++) {
        let result = playRound(computerPlay(), playerSelect());
        console.log(result);
        if (result.includes("Win")) {
@@ -52,10 +52,9 @@ function game() {
            computerScore++;
        } else {
            console.log("No points");
-           continue;
        }
        console.log(`The score is now ${playerScore} - ${computerScore}`);
-    }
+    //}
     if (playerScore > computerScore) {
         return `The final score is ${playerScore} - ${computerScore}, the player wins!`;
     } else if (computerScore > playerScore) {
