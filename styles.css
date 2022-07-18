@@ -5,3 +5,8 @@
     align-items: center;
     gap: 20px;
 }
+
+.results {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
