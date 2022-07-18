@@ -13,12 +13,6 @@ function computerPlay() {
     return choice;
 }
 
-function playerSelect(btnClick) {
-    if (btnClick == "rock") {
-        return "rock";
-    }
-}
-
 function playRound(computerChoice, playerChoice) {
     console.log(`You chose ${playerChoice}`);
     console.log(`Computer chose ${computerChoice}`);
