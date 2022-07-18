@@ -3,10 +3,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
     gap: 20px;
 }
 
 .results {
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
+}
+
+.choices {
+    display: flex;
+    gap: 10px;
 }
