@@ -6,6 +6,10 @@ rockbtn.addEventListener("click", () => playRound(computerPlay(), "rock"));
 paperbtn.addEventListener("click", () => playRound(computerPlay(), "paper"));
 scissorsbtn.addEventListener("click", () => playRound(computerPlay(), "scissors"));
 
+const playerChoice = document.querySelector('.player-choice');
+const computerChoice = document.querySelector('.computer-choice');
+const gameResults = document.querySelector('.final');
+
 function computerPlay() {
     const choices = ["rock", "paper", "scissors"];
     let randomIndex = Math.floor(Math.random() * choices.length);
@@ -14,6 +18,7 @@ function computerPlay() {
 }
 
 function playRound(computerChoice, playerChoice) {
+    
     console.log(`You chose ${playerChoice}`);
     console.log(`Computer chose ${computerChoice}`);
     if (playerChoice == "rock") {
