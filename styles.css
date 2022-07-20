@@ -1,7 +1,3 @@
-* {
-    color: black;
-}
-
 body {
     background-color: rgb(26, 26, 26);
 }
@@ -18,6 +14,7 @@ body {
 .results {
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
+    color: white;
 }
 
 .choices {
