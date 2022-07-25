@@ -2,6 +2,7 @@ const rockbtn = document.querySelector('.rock.btn');
 const paperbtn = document.querySelector('.paper.btn');
 const scissorsbtn = document.querySelector('.scissors.btn');
 const scoreBoard = document.querySelector('.score');
+let roundNum = 0;
 
 let playerScore = 0;
 let computerScore = 0;
@@ -9,16 +10,34 @@ let computerScore = 0;
 
 rockbtn.addEventListener("click", () => {
     playRound(computerPlay(), "rock")
+
+    if (roundNum < 4) {
+        roundNum++;
+    } else {
+        console.log("done");
+    }
     // count++;
     // console.log(count);
 });
 paperbtn.addEventListener("click", () => {
     playRound(computerPlay(), "paper")
+
+    if (roundNum < 4) {
+        roundNum++;
+    } else {
+        console.log("done");
+    }
     // count++;
     // console.log(count);
 });
 scissorsbtn.addEventListener("click", () => {
     playRound(computerPlay(), "scissors")
+
+    if (roundNum < 4) {
+        roundNum++;
+    } else {
+        console.log("done");
+    }
     // count++;
     // console.log(count);
 });
