@@ -94,14 +94,12 @@ function roundCount() {
 
 function displayReset() {
     roundNum = 0;
-    if (roundNum = 0) {
-        scoreBoard.textContent = "";
-    }
     playerScore = 0;
     computerScore = 0;
 }
 
 function playRound(computerChoice, playerChoice) {
+    scoreBoard.textContent = `${playerScore} - ${computerScore}`;
     if (checkWinner(computerChoice, playerChoice) == 1) {
         playerScore++;
         scoreBoard.textContent = `${playerScore} - ${computerScore}`;
