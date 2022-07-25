@@ -3,6 +3,7 @@ const paperbtn = document.querySelector('.paper.btn');
 const scissorsbtn = document.querySelector('.scissors.btn');
 const scoreBoard = document.querySelector('.score');
 const roundNumber = document.querySelector('.round-number');
+const winnerOfGame = document.querySelector('.winner');
 let roundNum = 0;
 
 let playerScore = 0;
@@ -78,8 +79,16 @@ function roundCount() {
     roundNumber.textContent = `Round ${roundNum + 1}`;
     if (roundNum < 4) {
         roundNum++;
+        winnerOfGame.textContent = "";
     } else {
-        console.log("done");
+        if (playerScore > computerScore) {
+            winnerOfGame.textContent = "You win!";
+        } else if (computerScore > playerScore) {
+            winnerOfGame.textContent = "You Lose!";
+        } else {
+            winnerOfGame.textContent = "It's a tie!";
+        }
+        roundNum = 0;
     }
 }
 
