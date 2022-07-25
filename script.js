@@ -94,9 +94,11 @@ function roundCount() {
 
 function displayReset() {
     roundNum = 0;
+    if (roundNum = 0) {
+        scoreBoard.textContent = "";
+    }
     playerScore = 0;
     computerScore = 0;
-    scoreBoard.textContent = "";
 }
 
 function playRound(computerChoice, playerChoice) {
