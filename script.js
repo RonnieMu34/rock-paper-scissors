@@ -89,6 +89,8 @@ function roundCount() {
             winnerOfGame.textContent = "It's a tie!";
         }
         roundNum = 0;
+        playerScore = 0;
+        computerScore = 0;
     }
 }
 
