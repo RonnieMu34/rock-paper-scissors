@@ -88,10 +88,15 @@ function roundCount() {
         } else {
             winnerOfGame.textContent = "It's a tie!";
         }
-        roundNum = 0;
-        playerScore = 0;
-        computerScore = 0;
+        displayReset();
     }
+}
+
+function displayReset() {
+    roundNum = 0;
+    playerScore = 0;
+    computerScore = 0;
+    scoreBoard.textContent = "";
 }
 
 function playRound(computerChoice, playerChoice) {
