@@ -21,3 +21,8 @@ body {
     display: flex;
     gap: 10px;
 }
+
+.score {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
