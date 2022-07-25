@@ -30,3 +30,8 @@ body {
 .round-number {
     font-family: 'Courier New', Courier, monospace;
 }
+
+.winner {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
