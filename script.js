@@ -10,36 +10,15 @@ let computerScore = 0;
 
 rockbtn.addEventListener("click", () => {
     playRound(computerPlay(), "rock")
-
-    if (roundNum < 4) {
-        roundNum++;
-    } else {
-        console.log("done");
-    }
-    // count++;
-    // console.log(count);
+    roundCount();
 });
 paperbtn.addEventListener("click", () => {
     playRound(computerPlay(), "paper")
-
-    if (roundNum < 4) {
-        roundNum++;
-    } else {
-        console.log("done");
-    }
-    // count++;
-    // console.log(count);
+    roundCount();
 });
 scissorsbtn.addEventListener("click", () => {
     playRound(computerPlay(), "scissors")
-
-    if (roundNum < 4) {
-        roundNum++;
-    } else {
-        console.log("done");
-    }
-    // count++;
-    // console.log(count);
+    roundCount();
 });
 
 const playerChoiceElem = document.querySelector('.player-choice');
@@ -61,45 +40,44 @@ function checkWinner(computerChoice, playerChoice) {
         case "rock":
             if (computerChoice == "rock") {
                 gameResults.textContent = "It's a Tie! Both chose rock!";
-                console.log("tie");
                 return 0;
             } else if (computerChoice == "scissors") {
                 gameResults.textContent = "You Win! Rock beats scissors!";
-                console.log("win");
                 return 1;
             } else {
                 gameResults.textContent = "You Lose! Paper beats rock!";
-                console.log("loss");
                 return -1;
             }
         case "paper":
             if (computerChoice == "rock") {
                 gameResults.textContent = "You Win! Paper beats rock!";
-                console.log("win");
                 return 1;
             } else if (computerChoice == "scissors") {
                 gameResults.textContent = "You Lose! Scissors beats paper!";
-                console.log("win");
                 return -1;
             } else {
                 gameResults.textContent = "It's a Tie! Both chose paper!";
-                console.log("loss");
                 return 0;
             }
         case "scissors":
             if (computerChoice == "rock") {
                 gameResults.textContent = "You Lose! Rock beats scissors!";
-                console.log("loss");
                 return -1;
             } else if (computerChoice == "scissors") {
                 gameResults.textContent = "It's a Tie! Both chose scissors!";
-                console.log("win");
                 return 0;
             } else {
                 gameResults.textContent = "You Win! Scissors beats paper!";
-                console.log("loss");
                 return 1;
             }
+    }
+}
+
+function roundCount() {
+    if (roundNum < 4) {
+        roundNum++;
+    } else {
+        console.log("done");
     }
 }
 
