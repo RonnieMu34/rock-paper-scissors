@@ -2,6 +2,7 @@ const rockbtn = document.querySelector('.rock.btn');
 const paperbtn = document.querySelector('.paper.btn');
 const scissorsbtn = document.querySelector('.scissors.btn');
 const scoreBoard = document.querySelector('.score');
+const roundNumber = document.querySelector('.round-number');
 let roundNum = 0;
 
 let playerScore = 0;
@@ -74,6 +75,7 @@ function checkWinner(computerChoice, playerChoice) {
 }
 
 function roundCount() {
+    roundNumber.textContent = `Round ${roundNum + 1}`;
     if (roundNum < 4) {
         roundNum++;
     } else {
